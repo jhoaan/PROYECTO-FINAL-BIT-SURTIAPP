@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="/img/Logotipo para Mercado Ecológico con Ilustración de Frutas -1-modified.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4297415fee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/JS/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/carrito.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
+                    <!-- <h1>
+                    <a class="navbar-brand" href="/HTML/inicio.html" target="_blank">SURTIAPP</a>
+                    </h1> -->
+                    <img src="/img/logotipo surtiapp.png" alt="">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="/img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/inicio/sesion"><img src="/img/cerrar sesion.png" alt="cerrarsesion"></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<!-- SLIDER OFERTAS -->
+<h1>¡Conoce nuestros productos y ofertas!</h1>
+
+<div class="slider">
+    <ul>
+        <li><img src="/img/OF1.png" alt="of1"></li>
+        <li><img src="/img/OF2.png" alt="of2"></li>
+        <li><img src="/img/OF3.png" alt="of3"></li>
+        <li><img src="/img/OF4.png" alt="of4"></li>
+        <li><img src="/img/OF5.png" alt="of5"></li>
+    </ul>
+</div>
+
+<!-- PORTAFOLIO -->
+
+<section class="portafolio">
+    <h1>Nuestros productos</h1>
+    <div class="portafolio-container">
+        <section class="portafolio-item">
+            <a href="producto1"target="_blank"><img src="/img/1.png" alt="LG1" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>BEBIDAS ALCOHÓLICAS</h2>
+            </section>
+        </section>
+
+        <section class="portafolio-item">
+            <a href="/HTML/producto2.html"target="_blank"><img src="/img/2.png" alt="LG2" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>BEBIDAS NO ALCOHÓLICAS</h2>
+            </section>
+        </section>
+
+        <section class="portafolio-item">
+            <a href="/HTML/producto3.html"target="_blank"><img src="/img/3.png" alt="LG3" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>CANASTA Y DESPENSA</h2>
+            </section>
+        </section>
+    </div>
+
+    <div class="portafolio-container">
+        <section class="portafolio-item">
+            <a href="/HTML/producto4.html"target="_blank"><img src="/img/4.png" alt="LG4" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>FRUTAS Y VERDURAS</h2>
+            </section>
+        </section>
+
+        <section class="portafolio-item">
+            <a href="/HTML/producto5.html"target="_blank"><img src="/img/5.png" alt="LG5" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>LÁCTEOS Y REFRIGERADOS</h2>
+            </section>
+        </section>
+
+        <section class="portafolio-item">
+            <a href="/HTML/producto6.html"target="_blank"><img src="/img/6.png" alt="LG6" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>DULCES Y PASABOCAS</h2>
+            </section>
+        </section>
+    </div>
+
+    <div class="portafolio-container">
+        <section class="portafolio-item">
+            <a href="/HTML/producto7.html"target="_blank"><img src="/img/7.png" alt="LG7" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>TODO PARA MASCOTAS</h2>
+            </section>
+        </section>
+
+        <section class="portafolio-item">
+            <a href="/HTML/producto8.html"target="_blank"><img src="/img/8.png" alt="LG8" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>CUIDADO DEL HOGAR</h2>
+            </section>
+        </section>
+
+        <section class="portafolio-item">
+            <a href="/HTML/producto9.html"target="_blank"><img src="/img/9.png" alt="LG9" class="portafolio-img"></a>
+            <section class="portafolio-text">
+                <h2>CUIDADO PERSONAL</h2>
+            </section>
+        </section>
+    </div>
+
+    <div class="portafolio-container2">
+        <section class="portafolio-item2">
+            <a href="/HTML/producto10.html"target="_blank"><img src="/img/10.png" alt="LG10" class="portafolio-img2"></a>
+            <section class="portafolio-text2">
+                <h2>CUIDADO DE LA SALUD</h2>
+            </section>
+        </section>
+
+        <section class="portafolio-item2">
+            <a href="/HTML/producto11.html"target="_blank"><img src="/img/11.png" alt="LG11" class="portafolio-img2"></a>
+            <section class="portafolio-text2">
+                <h2>TODO PARA BEBES</h2>
+            </section>
+        </section>
+</section>
+
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">¡Chatea con nosotros!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- CONTENEDOR DE MENSAJE -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- MENSAJES -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Cargando...</span></p>
+                        </div>
+
+                        <!-- CAJITA DE RESPUESTA USUARIO -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Presiona 'Enter' para enviar un mensaje">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pie">
+        <h1>Síguenos:</h1>
+        <div>
+            <a href="https://www.facebook.com/Flying-Star-101131785816573"><img class="iconos"
+                    src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="facebook" /></a>
+            <a href="https://www.instagram.com/flyingstar.co/?hl=es-la"><img class="iconos"
+                    src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png" alt="instagram" /></a>
+            <a href="https://twitter.com/FlyingS23947165"><img class="iconos" src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2012/06/twitter-bird-white-on-blue.jpg?fit=300%2C300&ssl=1"
+                    alt="twitter" /></a>
+        </div>
+        <div>2022 &copy; SURTIAPP</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>//JAVASCRIPT RESPUESTAS
+        function getBotResponse(input) {
+    if (input == "Hola") {
+        return "Hola, ¿en que puedo ayudarte? Selecciona una de estas opciones: 1. Asesor 2. Correo Electronico";
+    } else if (input == "1") {
+        return "Puedes contactar con un asesor comunicandote a traves de este número en Whatsapp 3142161635";
+    } else if (input == "2") {
+        return "surtiapp@gmail.com";
+    }else if (input == "Adios" || input == "Gracias") {
+        return "Fue un gusto hablar contigo!";
+    } else {
+        return "No entiendo tu consulta. Intenta nuevamente";
+    }
+    }
+        </script>
+
+
+            <!--CHAT BOT -->
+
+
+        <script>
+            // Collapsible
+var coll = document.getElementsByClassName("collapsible");
+
+for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+
+        var content = this.nextElementSibling;
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+
+function getTime() {
+    let today = new Date();
+    hours = today.getHours();
+    minutes = today.getMinutes();
+
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    let time = hours + ":" + minutes;
+    return time;
+}
+
+//Primer mensaje
+function firstBotMessage() {
+    let firstMessage = "Hey, estoy aquí para ayudarte"
+    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+
+    let time = getTime();
+
+    $("#chat-timestamp").append(time);
+    document.getElementById("userInput").scrollIntoView(false);
+}
+
+firstBotMessage();
+
+//Recupera la respuesta
+function getHardResponse(userText) {
+    let botResponse = getBotResponse(userText);
+    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+    $("#chatbox").append(botHtml);
+
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+}
+
+//Obtiene el texto del cuadro de entrada y lo procesa
+function getResponse() {
+    let userText = $("#textInput").val();
+
+    if (userText == "") {
+        userText = "Debes enviar un mensaje primero";
+    }
+
+    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+    setTimeout(() => {
+        getHardResponse(userText);
+    }, 1000)
+
+}
+
+//Maneja el envío de texto a través de clics en botones
+function buttonSendText(sampleText) {
+    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
+
+    $("#textInput").val("");
+    $("#chatbox").append(userHtml);
+    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+}
+
+function sendButton() {
+    getResponse();
+}
+
+//Enter para enviar un mensaje
+$("#textInput").keypress(function (e) {
+    if (e.which == 13) {
+        getResponse();
+    }
+}); 
+        </script>
+    
+
+</body>
+</html>

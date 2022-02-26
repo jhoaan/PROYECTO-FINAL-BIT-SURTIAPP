@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('_head.ejs') %>
+    <%- include('styles.ejs') %>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
+                    <!-- <h1>
+                    <a class="navbar-brand" href="/HTML/inicio.html" target="_blank">SURTIAPP</a>
+                    </h1> -->
+                    <img src="/img/logotipo surtiapp.png" alt="">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <img src="/img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px"
+                                    width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false"></img>
+                                <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                                    <table id="lista-carrito" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+
+                                    <a href="#" id="vaciar-carrito" class="btn btn-primary btn-block">Vaciar Carrito</a>
+                                    <a href="#" id="procesar-pedido" class="btn btn-danger btn-block">Procesar
+                                        Compra</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/inicio/sesion"><img src="/img/cerrar sesion.png" alt="cerrarsesion"> <a href=""></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<% if(nuevo == true){ %>
+    <div class="contenedor">
+        <div class="boton">
+            <button><a class="titulo" href ="/crear">Agregar Producto</a></button> - <button><a class="titulo1" href="/inventario">Ver Inventario</a></button>
+        </div>
+<div class="inventariotexto">
+<h3>Inventario</h3>
+</div>
+
+<form action="/subproducto" method="post">
+    <label>idCategoria</label>
+    <select name="idCategoria">
+        <option value="010101">Six Pack Águila</option>
+        <option value="010102">Six Pack Águila 0.0</option>
+        <option value="010103">Six Pack Póker</option>
+        <option value="010104">Six Pack Póker Pura Malta</option>
+        <option value="010105">Six Pack Cerveza Heineken</option>
+        <option value="010106">Six Pack Club Colombia Dorada</option>
+        <option value="010107">Six Pack Corona</option>
+        <option value="010108">Six Pack Coronita</option>
+        <option value="010201">Media de Aguardiente Néctar Verde</option>
+        <option value="010202">Media de Aguardiente Antioqueño Verde</option>
+        <option value="010203">Media de Aguardiente Antioqueño Azul</option>
+        <option value="010204">Aguardiente Chorrito Ardiente</option>
+        <option value="010205">Aguardiente Cristal XS</option>
+        <option value="010301">Whisky Johnnie Walker Red Label</option>
+        <option value="010302">Whisky Black & White</option>
+        <option value="010303">Licor de Whisky Special Queen</option>
+        <option value="010401">Ron Viejo de Caldas Tradicional </option>
+        <option value="010402">Ron Medellín</option>
+        <option value="010403">Ron Santa Fe 4 años</option>
+        <option value="010404">Ron Medellín 3 años</option>
+        <option value="010501">Vodka de Lulo Smirnoff 375ml</option>
+        <option value="010502">Vodka de Lulo Smirnoff 750ml</option>
+        <option value="010503">Vodka de Lulo Smirnoff 1L</option>
+        <option value="010504">Vodka Smirnoff Red 350ml</option>
+    </select>
+
+    <br>
+    <label>Categoria</label>
+    <select name="categoria">
+        <option value="Cerveza">Cerveza</option>
+        <option value="Aguardiente">Aguardiente</option>
+        <option value="Whisky">Whisky</option>
+        <option value="Ron">Ron</option>
+        <option value="Vodka">Vodka</option>
+    </select>
+
+    <br>
+    <label>Precio</label>
+    <select name="valor">
+        <option value="12100">12100</option>
+        <option value="10500">10500</option>
+        <option value="12000">12000</option>
+        <option value="14800">14800</option>
+        <option value="14520">14520</option>
+        <option value="13000">13000</option>
+        <option value="21000">21000</option>
+        <option value="12500">12500</option>
+        <option value="16050">16050</option>
+        <option value="14000">14000</option>
+        <option value="15000">15000</option>
+        <option value="17000">17000</option>
+        <option value="11200">11200</option>
+        <option value="11300">11300</option>
+        <option value="52870">52870</option>
+        <option value="13500">13500</option>
+        <option value="11998">11998</option>
+        <option value="12287">12287</option>
+        <option value="20300">20300</option>
+        <option value="21614">21614</option>
+        <option value="18580">18580</option>
+        <option value="33760">33760</option>
+        <option value="39630">39630</option>
+        <option value="38820">38820</option>
+    </select>
+
+    <br>
+    <label>Cantidad</label>
+    <select name="cantidad">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <br>
+    <label>Lo vendes</label>
+    <select name="vendes">
+        <option value="14500">14500</option>
+        <option value="12000">12000</option>
+        <option value="16000">16000</option>
+        <option value="15900">15900</option>
+        <option value="21000">21000</option>
+        <option value="15600">15600</option>
+        <option value="26000">26000</option>
+        <option value="16000">16000</option>
+        <option value="19500">19500</option>
+        <option value="18000">18000</option>
+        <option value="19000">19000</option>
+        <option value="21000">21000</option>
+        <option value="11200">11200</option>
+        <option value="13000">13000</option>
+        <option value="54000">54000</option>
+        <option value="14000">14000</option>
+        <option value="14500">14500</option>
+        <option value="20600">20600</option>
+        <option value="20400">20400</option>
+        <option value="25000">25000</option>
+        <option value="21000">21000</option>
+        <option value="37000">37000</option>
+        <option value="44000">44000</option>
+        <option value="40000">40000</option>
+    </select>
+
+    <br>
+    <label>Le ganas</label>
+    <select name="ganas">
+        <option value="2400">2400</option>
+        <option value="1500">1500</option>
+        <option value="4000">4000</option>
+        <option value="1100">1100</option>
+        <option value="6480">6480</option>
+        <option value="3600">3600</option>
+        <option value="5000">5000</option>
+        <option value="3500">3500</option>
+        <option value="3450">3450</option>
+        <option value="4000">4000</option>
+        <option value="4000">4000</option>
+        <option value="4000">4000</option>
+        <option value="1800">1800</option>
+        <option value="1700">1700</option>
+        <option value="1130">1130</option>
+        <option value="500">500</option>
+        <option value="3950">3950</option>
+        <option value="2502">2502</option>
+        <option value="8313">8313</option>
+        <option value="100">100</option>
+        <option value="3386">3386</option>
+        <option value="2420">2420</option>
+        <option value="3240">3240</option>
+        <option value="4370">4370</option>
+    </select>
+
+    <br>
+    <label>Estado</label>
+    <select name="estado">
+        <option value="true">En stock</option>
+        <option value="false">Sin stock</option>
+    </select>
+
+    <br>
+    <button type="submit">Guardar</button>
+
+</form>
+
+<% }else{ %>
+    <div class="cuerpoguardado">
+<h3>Modificar Inventario</h3>
+<div class="botonguardado">
+    <button><a class="titulo" href ="/crear">Agregar Producto</a></button> - <button><a class="titulo1" href="/inventario">Ver Inventario</a></button>
+</div>
+
+
+<form action="/modificar" method="post">
+    <input type="hidden" name="id" value="<%= res._id %>">
+    <label>idCategoria</label>
+    <select name="idCategoria">
+        <option <%= (res.idCategoria == 010101)? "selected":"" %> value="010101">Six Pack Águila</option>
+        <option <%= (res.idCategoria == 010102)? "selected":"" %> value="010102">Six Pack Águila 0.0</option>
+        <option <%= (res.idCategoria == 010103)? "selected":"" %> value="010103">Six Pack Póker</option>
+        <option <%= (res.idCategoria == 010104)? "selected":"" %> value="010104">Six Pack Póker Pura Malta</option>
+        <option <%= (res.idCategoria == 010105)? "selected":"" %> value="010105">Six Pack Cerveza Heineken</option>
+        <option <%= (res.idCategoria == 010106)? "selected":"" %> value="010106">Six Pack Club Colombia Dorada</option>
+        <option <%= (res.idCategoria == 010107)? "selected":"" %> value="010107">Six Pack Corona</option>
+        <option <%= (res.idCategoria == 010108)? "selected":"" %> value="010108">Six Pack Coronita</option>
+        <option <%= (res.idCategoria == 010201)? "selected":"" %> value="010201">Media de Aguardiente Néctar Verde
+        </option>
+        <option <%= (res.idCategoria == 010202)? "selected":"" %> value="010202">Media de Aguardiente Antioqueño Verde
+        </option>
+        <option <%= (res.idCategoria == 010203)? "selected":"" %> value="010203">Media de Aguardiente Antioqueño Azul
+        </option>
+        <option <%= (res.idCategoria == 010204)? "selected":"" %> value="010204">Aguardiente Chorrito Ardiente</option>
+        <option <%= (res.idCategoria == 010205)? "selected":"" %> value="010205">Aguardiente Cristal XS</option>
+        <option <%= (res.idCategoria == 010301)? "selected":"" %> value="010301">Whisky Johnnie Walker Red Label
+        </option>
+        <option <%= (res.idCategoria == 010302)? "selected":"" %> value="010302">Whisky Black & White</option>
+        <option <%= (res.idCategoria == 010303)? "selected":"" %> value="010303">Licor de Whisky Special Queen</option>
+        <option <%= (res.idCategoria == 010401)? "selected":"" %> value="010401">Ron Viejo de Caldas Tradicional
+        </option>
+        <option <%= (res.idCategoria == 010402)? "selected":"" %> value="010402">Ron Medellín</option>
+        <option <%= (res.idCategoria == 010403)? "selected":"" %> value="010403">Ron Santa Fe 4 años</option>
+        <option <%= (res.idCategoria == 010404)? "selected":"" %> value="010404">Ron Medellín 3 años</option>
+        <option <%= (res.idCategoria == 010501)? "selected":"" %> value="010501">Vodka de Lulo Smirnoff 375ml</option>
+        <option <%= (res.idCategoria == 010502)? "selected":"" %> value="010502">Vodka de Lulo Smirnoff 750ml</option>
+        <option <%= (res.idCategoria == 010503)? "selected":"" %> value="010503">Vodka de Lulo Smirnoff 1L</option>
+        <option <%= (res.idCategoria == 010504)? "selected":"" %> value="010504">Vodka Smirnoff Red 350ml</option>
+    </select>
+
+
+    <br>
+    <label>Precio</label>
+    <select name="valor">
+        <option <%= (res.valor == 12100)? "selected":"" %> value="12100">12100</option>
+        <option <%= (res.valor == 10500)? "selected":"" %> value="10500">10500</option>
+        <option <%= (res.valor == 12000)? "selected":"" %> value="12000">12000</option>
+        <option <%= (res.valor == 14800)? "selected":"" %> value="14800">14800</option>
+        <option <%= (res.valor == 14520)? "selected":"" %> value="14520">14520</option>
+        <option <%= (res.valor == 13000)? "selected":"" %> value="13000">13000</option>
+        <option <%= (res.valor == 21000)? "selected":"" %> value="21000">21000</option>
+        <option <%= (res.valor == 12500)? "selected":"" %> value="12500">12500</option>
+        <option <%= (res.valor == 16050)? "selected":"" %> value="16050">16050</option>
+        <option <%= (res.valor == 14000)? "selected":"" %> value="14000">14000</option>
+        <option <%= (res.valor == 15000)? "selected":"" %> value="15000">15000</option>
+        <option <%= (res.valor == 17000)? "selected":"" %> value="17000">17000</option>
+        <option <%= (res.valor == 11200)? "selected":"" %> value="11200">11200</option>
+        <option <%= (res.valor == 11300)? "selected":"" %> value="11300">11300</option>
+        <option <%= (res.valor == 52870)? "selected":"" %> value="52870">52870</option>
+        <option <%= (res.valor == 13500)? "selected":"" %> value="13500">13500</option>
+        <option <%= (res.valor == 11998)? "selected":"" %> value="11998">11998</option>
+        <option <%= (res.valor == 12287)? "selected":"" %> value="12287">12287</option>
+        <option <%= (res.valor == 20300)? "selected":"" %> value="20300">20300</option>
+        <option <%= (res.valor == 21614)? "selected":"" %> value="21614">21614</option>
+        <option <%= (res.valor == 18580)? "selected":"" %> value="18580">18580</option>
+        <option <%= (res.valor == 33760)? "selected":"" %> value="33760">33760</option>
+        <option <%= (res.valor == 39630)? "selected":"" %> value="39630">39630</option>
+        <option <%= (res.valor == 38820)? "selected":"" %> value="38820">38820</option>
+    </select>
+
+    <br>
+    <label>Cantidad</label>
+    <select name="cantidad">
+        <option <%= (res.cantidad == 1)? "selected":"" %> value="1">1</option>
+        <option <%= (res.cantidad == 2)? "selected":"" %> value="2">2</option>
+        <option <%= (res.cantidad == 3)? "selected":"" %> value="3">3</option>
+        <option <%= (res.cantidad == 4)? "selected":"" %> value="4">4</option>
+        <option <%= (res.cantidad == 5)? "selected":"" %> value="5">5</option>
+        <option <%= (res.cantidad == 6)? "selected":"" %> value="6">6</option>
+        <option <%= (res.cantidad == 7)? "selected":"" %> value="7">7</option>
+        <option <%= (res.cantidad == 8)? "selected":"" %> value="8">8</option>
+        <option <%= (res.cantidad == 9)? "selected":"" %> value="9">9</option>
+        <option <%= (res.cantidad == 10)? "selected":"" %> value="10">10</option>
+    </select>
+
+    <br>
+    <label>Lo vendes</label>
+    <select name="vendes">
+        <option <%= (res.vendes == 14500)? "selected":"" %> value="14500">14500</option>
+        <option <%= (res.vendes == 12000)? "selected":"" %> value="12000">12000</option>
+        <option <%= (res.vendes == 16000)? "selected":"" %> value="16000">16000</option>
+        <option <%= (res.vendes == 15900)? "selected":"" %> value="15900">15900</option>
+        <option <%= (res.vendes == 21000)? "selected":"" %> value="21000">21000</option>
+        <option <%= (res.vendes == 15600)? "selected":"" %> value="15600">15600</option>
+        <option <%= (res.vendes == 26000)? "selected":"" %> value="26000">26000</option>
+        <option <%= (res.vendes == 16000)? "selected":"" %> value="16000">16000</option>
+        <option <%= (res.vendes == 19500)? "selected":"" %> value="19500">19500</option>
+        <option <%= (res.vendes == 18000)? "selected":"" %> value="18000">18000</option>
+        <option <%= (res.vendes == 19000)? "selected":"" %> value="19000">19000</option>
+        <option <%= (res.vendes == 21000)? "selected":"" %> value="21000">21000</option>
+        <option <%= (res.vendes == 11200)? "selected":"" %> value="11200">11200</option>
+        <option <%= (res.vendes == 13000)? "selected":"" %> value="13000">13000</option>
+        <option <%= (res.vendes == 54000)? "selected":"" %> value="54000">54000</option>
+        <option <%= (res.vendes == 14000)? "selected":"" %> value="14000">14000</option>
+        <option <%= (res.vendes == 14500)? "selected":"" %> value="14500">14500</option>
+        <option <%= (res.vendes == 20600)? "selected":"" %> value="20600">20600</option>
+        <option <%= (res.vendes == 20400)? "selected":"" %> value="20400">20400</option>
+        <option <%= (res.vendes == 25000)? "selected":"" %> value="25000">25000</option>
+        <option <%= (res.vendes == 21000)? "selected":"" %> value="21000">21000</option>
+        <option <%= (res.vendes == 37000)? "selected":"" %> value="37000">37000</option>
+        <option <%= (res.vendes == 44000)? "selected":"" %> value="44000">44000</option>
+        <option <%= (res.vendes == 40000)? "selected":"" %> value="40000">40000</option>
+    </select>
+
+    <br>
+    <label>Le ganas</label>
+    <select name="ganas">
+        <option <%= (res.ganas == 2400)? "selected":"" %> value="2400">2400</option>
+        <option <%= (res.ganas == 1500)? "selected":"" %> value="1500">1500</option>
+        <option <%= (res.ganas == 4000)? "selected":"" %> value="4000">4000</option>
+        <option <%= (res.ganas == 1100)? "selected":"" %> value="1100">1100</option>
+        <option <%= (res.ganas == 6480)? "selected":"" %> value="6480">6480</option>
+        <option <%= (res.ganas == 3600)? "selected":"" %> value="3600">3600</option>
+        <option <%= (res.ganas == 5000)? "selected":"" %> value="5000">5000</option>
+        <option <%= (res.ganas == 3500)? "selected":"" %> value="3500">3500</option>
+        <option <%= (res.ganas == 3450)? "selected":"" %> value="3450">3450</option>
+        <option <%= (res.ganas == 4000)? "selected":"" %> value="4000">4000</option>
+        <option <%= (res.ganas == 4000)? "selected":"" %> value="4000">4000</option>
+        <option <%= (res.ganas == 4000)? "selected":"" %> value="4000">4000</option>
+        <option <%= (res.ganas == 1800)? "selected":"" %> value="1800">1800</option>
+        <option <%= (res.ganas == 1700)? "selected":"" %> value="1700">1700</option>
+        <option <%= (res.ganas == 1130)? "selected":"" %> value="1130">1130</option>
+        <option <%= (res.ganas == 500)? "selected":"" %> value="500">500</option>
+        <option <%= (res.ganas == 3950)? "selected":"" %> value="3950">3950</option>
+        <option <%= (res.ganas == 2502)? "selected":"" %> value="2502">2502</option>
+        <option <%= (res.ganas == 8313)? "selected":"" %> value="8313">8313</option>
+        <option <%= (res.ganas == 100)? "selected":"" %> value="100">100</option>
+        <option <%= (res.ganas == 3386)? "selected":"" %> value="3386">3386</option>
+        <option <%= (res.ganas == 2420)? "selected":"" %> value="2420">2420</option>
+        <option <%= (res.ganas == 3240)? "selected":"" %> value="3240">3240</option>
+        <option <%= (res.ganas == 4370)? "selected":"" %> value="4370">4370</option>
+    </select>
+
+    <br>
+    <button type="submit">Guardar</button>
+
+</form>
+</div>
+<% } %>
+</div>
+</body>
+</html>

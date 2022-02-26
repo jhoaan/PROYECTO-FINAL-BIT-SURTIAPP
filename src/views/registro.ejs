@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('_head.ejs') %>
+    <%- include('styles.ejs') %>
+
+</head>
+<body>    
+
+    <div id="mincontaner">
+        <form id="form" class="row g-3 needs-validation" novalidate method="post" action="/registrar">
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Nombre(s)</label>
+                <input name="nombre" type="text" class="form-control" id="validationCustom01" required>
+                <div class="valid-feedback">
+                    Se ve bien!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">DNI</label>
+                <input name="dni" type="number" class="form-control" id="validationCustom02" required>
+                <div class="valid-feedback">
+                    Se ve bien!
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Correo</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input name="correo" type="text" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Por favor elige un nombre de usuario.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Dirección</label>
+                <input name="direccion" type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Por favor elige una direccion valida.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Ciudad</label>
+                <select name="ciudad" class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Bogotá D.C.</option>
+                    <option>Medellín</option>
+                    <option>Cali</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor elige una ciudad valida.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Celular</label>
+                <input name="celular" type="number" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                   Por favor elige un celular valido.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Contraseña</label>
+                <input name="contraseña" type="password" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Por favor elige una contraseña valida.
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Acepta los terminos y condiciones.
+                    </label>
+                    <div class="invalid-feedback">
+                        Debes aceptar antes de continuar.
+                    </div>
+                </div>
+            </div>
+            <div id="inicio" class="col-12">
+                <button id="boton" class="btn btn-primary" type="submit">Iniciar</button>
+            </div>
+        </form>
+    </div>
+
+    <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+          
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+          
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+              .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                  if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                  }
+          
+                  form.classList.add('was-validated')
+                }, false)
+              })
+          })()</script>
+</body>
+</html>   
